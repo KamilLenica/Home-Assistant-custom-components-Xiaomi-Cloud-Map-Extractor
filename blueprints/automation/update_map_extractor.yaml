@@ -87,7 +87,7 @@ variables:
   vacuum_entity: !input vacuum
   camera_entity: !input camera
   browser_mod_path: !input browser_mod_path
-  is_vacuum_docked: "{{ states(vacuum_entity) in ['unavailable', 'unknown', 'docked', 'sleeping'] }}"
+  is_vacuum_docked: "{{ states(vacuum_entity) in ['unavailable', 'unknown', 'docked', 'sleeping', 'charging'] }}"
   is_interval_docked_trigger: |-
     {{ 
       mode_to_handle in ['two_intervals', 'default_when_cleaning'] 
